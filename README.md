@@ -27,7 +27,3 @@ git clone https://github.com/ElecTwix/tursobench
 cd tursobench
 go run simple_concurrent.go
 ```
-
-## Root Cause
-
-Appears to be in the Go driver's connection handling or FFI layer, not Turso's core service. Driver may be using SQLite file locking instead of Turso's concurrent architecture.
